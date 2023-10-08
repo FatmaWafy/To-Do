@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Pathway Extreme", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --main: #5287bd3d;
+  --shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+body {
+  text-transform: capitalize;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(135deg, #153677, #4e085f);
+}
+.To-Do-App {
+  width: 100%;
+  max-width: 540px;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.To-Do-App h2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #002765;
+}
+.To-Do-App h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  color: #fff;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+ul li {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  font-size: 17px;
+  user-select: none;
+  padding: 12px 8px 12px 50px;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url("img/unchecked.png");
+  background-size: cover;
+  background-position: center;
+  top: 8px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url("img/checked.png");
+  background-size: cover;
+  background-position: center;
+}
+ul li span {
+  position: absolute;
+  content: "";
+  right: 2px;
+  top: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #555;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+}
+ul li span:hover {
+  background-color: #9e9e9e63;
+}
+
+.invailid-msg {
+  margin: -19px 0 8px 25px;
+  font-size: 11px;
+  color: #ff0000eb;
+  display: none;
+}
